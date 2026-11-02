@@ -1,19 +1,18 @@
-THE READING ROOM v0.8
+THE READING ROOM v0.9
 
-This update refreshes the visual theme with a lighter, cleaner palette: warm off-white surfaces, dark readable text, soft sage accents, quieter borders, and a simplified bookshelf.
+Upload the contents of this folder to your GitHub Pages repository. Keep ReadingRoom_Tracker_Import.json private and do NOT upload it to the public repository.
 
-All v0.7 functionality is retained. The local data key and schema remain compatible, so existing Reading Room data is preserved in the same browser on the same device. The included Scriptable companion is unchanged.
+v0.9 adds Reading History and a private tracker JSON import. Import ReadingRoom_Tracker_Import.json from Settings or Reading History. Demo seed entries are removed; other books you added are retained and matched by title/author where possible.
 
-FILES
-- index.html: local-first Reading Room dashboard
-- ReadingRoom_Widget_v06.js: Scriptable bookshelf companion
-- library.example.json: example library data
+The import preserves all 19 completed-reading entries, six TBR/library entries, month-only dates, blank formats, ratings, read type, reviews, ownership and notes. It does not invent exact days or unknown formats. Senlin Ascends remains qualitative profile context, not a dated/rated completion.
 
-OPENING
-Extract the ZIP and open index.html in a browser. On iPhone, opening a local HTML file in a preview may restrict external lookups; HTTPS hosting provides more reliable network access.
+Download backup preserves tracker data and books. Export for Scriptable remains schemaVersion 2 and exports the book list for compatibility. Data stays in browser local storage.
 
-DATA
-The dashboard stores data in browser localStorage. Use Settings > Download backup regularly. Export for Scriptable creates the JSON file for iCloud Drive / Scriptable / ReadingRoom/library.json.
 
-BOOK FINDER LIMITATIONS
-Libby and Hoopla are service shortcuts, not live account integrations. Google Books listings are not a complete retailer comparison and may not match the requested format or edition. Confirm format, edition, availability, and final price before purchasing.
+VERSION 1.0 - HYBRID READING HISTORY
+- Reading History now combines overview statistics with the chronological log.
+- KPI cards show completed entries, five-star entries, average recorded rating, and reread entries.
+- Rating distribution and recent month-level activity are calculated from imported tracker data.
+- Year, rating, and read-type filters narrow the history log.
+- Unknown dates, ratings, and formats remain unknown; charts use only recorded data.
+- Tracker data remains local to the browser and is not included in the public website files.
