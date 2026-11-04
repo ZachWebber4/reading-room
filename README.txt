@@ -1,4 +1,4 @@
-THE READING ROOM v1.1
+THE READING ROOM v1.2
 
 Upload the contents of this folder to your GitHub Pages repository. Keep ReadingRoom_Tracker_Import.json private and do NOT upload it to the public repository.
 
@@ -28,3 +28,17 @@ VERSION 1.1 - INTERACTIVE READING HISTORY
 - No data-model, localStorage key, backup, or Scriptable export changes. No tracker re-import needed. Filters are view-only and are not saved.
 
 UPGRADING FROM v1.0: replace index.html in your GitHub repo with this one. Keep your private tracker/library JSON files out of the repo.
+
+
+VERSION 1.2 - LOG A BOOK + COVER-ART WIDGET
+APP
+- "+ Log a book" (Reading History tab): title, author, month finished (optional, never guessed), rating (or unrated), first read/reread, format, review. Optionally marks the book Completed in your library (adds it if new; never demotes Hall of Fame).
+- Entries logged in the app are tagged source:"app" and labelled "Logged in app". Only these can be edited or deleted. Imported tracker records are read-only and untouched.
+- Re-importing your tracker keeps your app-logged entries. Backup/restore include them. They do not appear in the Scriptable export (books only), so the export format is unchanged.
+- Book dialog: "Find cover automatically" looks up an exact title match on Open Library and fills the Cover URL (review it, then Save).
+WIDGET (ReadingRoom_Widget_v12.js)
+- Uses the v0.4 cozy-shelf look, but reads your exported library.json (iCloud Drive / Scriptable / ReadingRoom / library.json) instead of a hard-coded list.
+- Covers: the book's coverURL, else its ISBN, else an Open Library title/author lookup. Images are cached on the phone; missing covers fall back to the v0.4 spine/front art.
+- Widget parameter: collection and page, e.g. reading, favorites, tbr, "tbr 1", "reading:daily". Empty parameter = Currently Reading.
+SETUP: in Scriptable, create a new script named "Reading Room", paste in ReadingRoom_Widget_v12.js, then export from the app and save library.json to the iCloud folder above. The older ReadingRoom_Widget_v06.js is still included.
+UPGRADING: replace index.html in your GitHub repo. No re-import needed.
