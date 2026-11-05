@@ -74,4 +74,5 @@ Order of results: (1) your recorded copies, (2) free loans, (3) cheapest purchas
 - Purchases: Google Play Books and Apple Books USD prices (ebook and audiobook), cheapest first, honouring the optional maximum price. Physical prices are NOT fetched automatically; used-book and library (WorldCat) links are provided instead.
 - Limits: Libby availability comes from OverDrive's public catalog and can lag the app. Hoopla has no public API, so it is a link only. If a source is blocked by the browser or offline, the status line says which one and the manual links still work.
 - Saved libraries are stored locally and included in backup/restore. No change to the Scriptable export or tracker data.
-UPGRADING: replace index.html in your GitHub repo. No re-import needed.
+UPGRADING: replace index.html in your GitHub repo. No re-import needed..
+
