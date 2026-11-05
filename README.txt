@@ -53,3 +53,13 @@ VERSION 1.2.1 - SHELF CAPTION POLISH
 V1.2.2 UPDATE
 - Scriptable widget now reads library.json from FileManager.local(): On My iPhone / Scriptable / ReadingRoom / library.json. No iCloud download or available iCloud storage is required.
 - Cover image cache remains in Scriptable local storage under ReadingRoomArt.
+
+
+VERSION 1.2.3 - APP-MANAGED SCRIPTABLE WIDGET
+- Settings now includes widget collection, heading, tap destination, page behavior, refresh interval, automatic cover lookup, and decorative bookend controls.
+- Update Widget launches the installed Scriptable app through its URL scheme and sends the current library plus widget settings. Scriptable writes both into its local On My iPhone storage; no iCloud Drive or manual JSON transfer is required for this handoff.
+- Scriptable stores widget settings in ReadingRoom/widget-settings.json and library data in ReadingRoom/library.json. Cover cache remains in ReadingRoomArt.
+- Existing widget parameters can still override the selected collection/page.
+- Manual library.json download remains available as a fallback.
+- No tracker history or personal review data is sent; only the library books and widget display settings are transferred.
+- The direct URL handoff has a payload-size guard. Very large libraries should use the manual JSON export.
