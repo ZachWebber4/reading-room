@@ -37,10 +37,10 @@ APP
 - Re-importing your tracker keeps your app-logged entries. Backup/restore include them. They do not appear in the Scriptable export (books only), so the export format is unchanged.
 - Book dialog: "Find cover automatically" looks up an exact title match on Open Library and fills the Cover URL (review it, then Save).
 WIDGET (ReadingRoom_Widget_v12.js)
-- Uses the v0.4 cozy-shelf look, but reads your exported library.json (iCloud Drive / Scriptable / ReadingRoom / library.json) instead of a hard-coded list.
+- Uses the v0.4 cozy-shelf look and reads your exported library.json from On My iPhone / Scriptable / ReadingRoom / library.json. The widget uses Scriptable local storage, not iCloud, so it does not require available iCloud storage.
 - Covers: the book's coverURL, else its ISBN, else an Open Library title/author lookup. Images are cached on the phone; missing covers fall back to the v0.4 spine/front art.
 - Widget parameter: collection and page, e.g. reading, favorites, tbr, "tbr 1", "reading:daily". Empty parameter = Currently Reading.
-SETUP: in Scriptable, create a new script named "Reading Room", paste in ReadingRoom_Widget_v12.js, then export from the app and save library.json to the iCloud folder above. The older ReadingRoom_Widget_v06.js is still included.
+SETUP: in Scriptable, create a new script named "Reading Room", paste in ReadingRoom_Widget_v12.js, then export from the app and save library.json to On My iPhone / Scriptable / ReadingRoom. In the Files app, choose Browse > On My iPhone > Scriptable, create a ReadingRoom folder if needed, and place library.json inside it. The older ReadingRoom_Widget_v06.js is still included.
 UPGRADING: replace index.html in your GitHub repo. No re-import needed.
 
 
@@ -48,3 +48,8 @@ VERSION 1.2.1 - SHELF CAPTION POLISH
 - Shelf books use a consistent caption width and a three-line title limit, with an ellipsis for exceptionally long titles.
 - Full titles remain available as the book button accessible label and title, and opening the book still shows its full details.
 - No data-model, localStorage, backup, tracker-import, or Scriptable-export changes.
+
+
+V1.2.2 UPDATE
+- Scriptable widget now reads library.json from FileManager.local(): On My iPhone / Scriptable / ReadingRoom / library.json. No iCloud download or available iCloud storage is required.
+- Cover image cache remains in Scriptable local storage under ReadingRoomArt.
