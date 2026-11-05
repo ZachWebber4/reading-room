@@ -42,3 +42,9 @@ WIDGET (ReadingRoom_Widget_v12.js)
 - Widget parameter: collection and page, e.g. reading, favorites, tbr, "tbr 1", "reading:daily". Empty parameter = Currently Reading.
 SETUP: in Scriptable, create a new script named "Reading Room", paste in ReadingRoom_Widget_v12.js, then export from the app and save library.json to the iCloud folder above. The older ReadingRoom_Widget_v06.js is still included.
 UPGRADING: replace index.html in your GitHub repo. No re-import needed.
+
+
+VERSION 1.2.1 - SHELF CAPTION POLISH
+- Shelf books use a consistent caption width and a three-line title limit, with an ellipsis for exceptionally long titles.
+- Full titles remain available as the book button accessible label and title, and opening the book still shows its full details.
+- No data-model, localStorage, backup, tracker-import, or Scriptable-export changes.
