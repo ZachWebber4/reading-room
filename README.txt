@@ -63,3 +63,15 @@ VERSION 1.2.3 - APP-MANAGED SCRIPTABLE WIDGET
 - Manual library.json download remains available as a fallback.
 - No tracker history or personal review data is sent; only the library books and widget display settings are transferred.
 - The direct URL handoff has a payload-size guard. Very large libraries should use the manual JSON export.
+
+
+VERSION 1.3.0 - LEAST-COST BOOK FINDER
+Order of results: (1) your recorded copies, (2) free loans, (3) cheapest purchases. Ebooks and audiobooks are both searched ("Ebook + audiobook" is the default format).
+- Relevance: results are scored against the title (and author, if you type "Title by Author"). Exact and close matches are shown; unrelated titles are hidden under a collapsed note. If several books share a title, tap "Search this one" in section 4 to narrow every source to that author.
+- Recorded library: matches are labelled Exact or Possible.
+- My libraries (Book Finder tab): add each library card by its OverDrive key (the part before .overdrive.com). Each is checked for ebook and audiobook availability and wait times. Optional Hoopla search link. Free public-domain sources (Project Gutenberg, LibriVox, Internet Archive/Open Library) can be switched on or off.
+- Best low-cost path: one line per format: free and available now, else free with the shortest wait, else the cheapest verified price.
+- Purchases: Google Play Books and Apple Books USD prices (ebook and audiobook), cheapest first, honouring the optional maximum price. Physical prices are NOT fetched automatically; used-book and library (WorldCat) links are provided instead.
+- Limits: Libby availability comes from OverDrive's public catalog and can lag the app. Hoopla has no public API, so it is a link only. If a source is blocked by the browser or offline, the status line says which one and the manual links still work.
+- Saved libraries are stored locally and included in backup/restore. No change to the Scriptable export or tracker data.
+UPGRADING: replace index.html in your GitHub repo. No re-import needed.
